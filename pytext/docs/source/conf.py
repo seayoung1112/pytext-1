@@ -20,7 +20,7 @@ import sys
 
 # source code directory, relative to this file, for sphinx-autobuild
 RST_SOURCE_DIR = os.path.abspath(".")
-PROJECT_ROOT = os.path.abspath("../../..")
+PROJECT_ROOT = os.path.abspath("../..")
 sys.path.insert(0, os.path.abspath("../../../"))
 
 
