@@ -117,19 +117,3 @@ def merge_token_labels_to_slot(token_ranges, labels, use_bio_label=True):
     )
 
     return ",".join(summary_list)
-
-
-def import_tests_module(packages_to_scan=None):
-    if not packages_to_scan:
-        packages_to_scan = ["pytext.tests", "tests"]
-
-    for package in packages_to_scan:
-        try:
-            return import_module(".data_utils", package=package)
-        except Exception:
-            pass
-    else:
-        raise ModuleNotFoundError(f"Scanned packages: {packages_to_scan}")
-
-
-tests_module = import_tests_module()
