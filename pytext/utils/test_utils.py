@@ -126,7 +126,7 @@ def import_tests_module(packages_to_scan=None):
     for package in packages_to_scan:
         try:
             return import_module(".data_utils", package=package)
-        except ModuleNotFoundError:
+        except Exception:
             pass
     else:
         raise ModuleNotFoundError(f"Scanned packages: {packages_to_scan}")
